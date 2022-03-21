@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/character_details_background"
+    tools:context=".activities.CharacterDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:padding="@dimen/padding_8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_character" />
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:textSize="14sp"
+            android:padding="@dimen/padding_8dp"
+            android:layout_marginEnd="@dimen/padding_16dp"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+        <ImageView
+            android:id="@+id/iv_character"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/menu_characters"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txt_id_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_description" />
+
+        <TextView
+            android:id="@+id/txt_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_32dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintStart_toEndOf="@+id/txt_id_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_description" />
+
+        <TextView
+            android:id="@+id/txt_Comics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Id" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_comics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Comics" />
+
+        <TextView
+            android:id="@+id/txt_series"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_comics"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_series"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_series" />
+
+        <TextView
+            android:id="@+id/txt_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_series" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_events"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/ck_favorite"
+            android:layout_width="@dimen/padding_65dp"
+            android:layout_height="@dimen/padding_65dp"
+            android:layout_marginEnd="@dimen/padding_4dp"
+            android:layout_marginBottom="@dimen/padding_4dp"
+            android:background="@drawable/my_checkbox"
+            android:button="@null"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_character"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:useMaterialThemeColors="false" />
+
+        <TextView
+            android:id="@+id/txt_urls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_16dp"
+            android:layout_marginTop="@dimen/padding_16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_events" />
+
+        <TextView
+            android:id="@+id/txt_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_24dp"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:clickable="true"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_urls" />
+
+        <TextView
+            android:id="@+id/txt_wiki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_32dp"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:clickable="true"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintEnd_toStartOf="@+id/txt_comiclink"
+            app:layout_constraintStart_toEndOf="@+id/txt_detail"
+            app:layout_constraintTop_toBottomOf="@+id/txt_urls" />
+
+        <TextView
+            android:id="@+id/txt_comiclink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_32dp"
+            android:layout_marginTop="@dimen/padding_8dp"
+            android:layout_marginBottom="@dimen/padding_16dp"
+            android:clickable="true"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            android:fontFamily="@font/manrope_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_wiki"
+            app:layout_constraintTop_toBottomOf="@+id/txt_urls" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

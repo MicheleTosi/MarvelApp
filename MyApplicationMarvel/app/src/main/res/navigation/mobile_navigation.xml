@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_characters">
+
+    <fragment
+        android:id="@+id/nav_characters"
+        android:name="it.mem.marvel.ui.characters.CharactersFragment"
+        android:label="@string/menu_characters"
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_nav_characters_to_favoriteCharacterListFragment"
+            app:destination="@id/favoriteCharacterListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_comics"
+        android:name="it.mem.marvel.ui.comics.ComicsFragment"
+        android:label="@string/menu_comics"
+        tools:layout="@layout/fragment_comics" />
+
+    <fragment
+        android:id="@+id/nav_events"
+        android:name="it.mem.marvel.ui.events.EventsFragment"
+        android:label="@string/menu_events"
+        tools:layout="@layout/fragment_events" />
+    <fragment
+        android:id="@+id/favoriteCharacterListFragment"
+        android:name="it.mem.marvel.ui.favorite.FavoriteCharacterListFragment"
+        android:label="Favorite Characters"
+        tools:layout="@layout/favorite_characters_list" >
+        <action
+            android:id="@+id/action_favoriteCharacterListFragment_to_nav_characters"
+            app:destination="@id/nav_characters" />
+    </fragment>
+</navigation>
